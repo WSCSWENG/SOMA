@@ -10,7 +10,7 @@ pin: True
 
 # set the default branch
 # default: empty, the default branch on GitHub
-branch: dev
+branch: 
 
 # update schedule
 # default: empty
@@ -26,18 +26,7 @@ search: True
 # default: empty
 # allowed: list
 requirements:
-  - requirements/staging.txt:
-      # update all dependencies and pin them
-      update: all
-      pin: True
-  - requirements/dev.txt:
-      # don't update dependencies, use global 'pin' default
-      update: False
-  - requirements/prod.txt:
-      # update insecure only, pin all
-      update: insecure
-      pin: True
-
+  
 # add a label to pull requests, default is not set
 # requires private repo permissions, even on public repos
 # default: empty
@@ -47,8 +36,6 @@ label_prs: update
 # requires private repo permissions, even on public repos
 # default: empty
 assignees:
- - carl
- - carlsen
 
 # configure the branch prefix the bot is using
 # default: pyup-
